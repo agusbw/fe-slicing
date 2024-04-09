@@ -8,7 +8,7 @@ const badgeVariants = cva(
   {
     variants: {
       variant: {
-        default: "text-gradient-inverse border-blue-500",
+        default: "text-gradient-inverse border-primary/60",
       },
     },
     defaultVariants: {
