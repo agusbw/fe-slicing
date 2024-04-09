@@ -4,18 +4,18 @@
 
 @layer base {
   :root {
-    --background: 0, 0%, 7%, 1;
-    --foreground: 0, 0%, 100%, 1;
-    --low-contrast-foreground: 0, 0%, 77%, 1;
-    --high-contrast-foreground: 274, 28%, 89%, 1;
+    --background: 0 0% 7%;
+    --foreground: 0 0% 100%;
+    --low-contrast-foreground: 0 0% 77%;
+    --high-contrast-foreground: 274 28% 89%;
 
-    --primary: 219, 99%, 55%, 1;
-    --primary-foreground: 240, 100%, 98%, 1;
+    --primary: 219 99% 55%;
+    --primary-foreground: 240 100% 98%;
 
-    --secondary: 0, 0%, 93%;
-    --secondary-foreground: 0, 0%, 100%;
+    --secondary: 0 0% 93%;
+    --secondary-foreground: 0 0% 100%;
 
-    --border: 0, 0%, 100%, 0.2;
+    --border: 0, 0%, 100%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
@@ -40,11 +40,11 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient bg-clip-text text-transparent;
+    @apply text-transparent bg-gradient bg-clip-text;
   }
 
   .text-gradient-inverse {
-    @apply bg-gradient-inverse bg-clip-text text-transparent;
+    @apply text-transparent bg-gradient-inverse bg-clip-text;
   }
 }
 
