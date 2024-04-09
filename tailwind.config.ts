@@ -17,6 +17,15 @@ const config = {
         "2xl": "1400px",
       },
     },
+    fontSize: {
+      xs: ["12px", "18px"],
+      sm: ["14px", "22px"],
+      base: ["16px", "24px"],
+      lg: ["20px", "32px"],
+      xl: ["24px", "40px"],
+      "2xl": ["32px", "40px"],
+      "3xl": ["48px", "64px"],
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -31,6 +40,10 @@ const config = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
         card: {
           DEFAULT: "hsl(var(--card))",
