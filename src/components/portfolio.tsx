@@ -33,7 +33,7 @@ function PortfoioCard({
         width={440}
         height={216}
       />
-      <div className="flex flex-col gap-4 p-4 border-[1px] border-primary-foreground/20 rounded-lg bg-gradient-to-tr from-black to-white/5">
+      <div className="flex flex-col gap-x-4 p-4 border-[1px] border-primary-foreground/20 rounded-lg bg-gradient-to-tr from-black to-white/5">
         <div className="flex gap-4">
           {categories.map((c) => {
             return <Badge key={c}>{c}</Badge>;
@@ -48,15 +48,15 @@ function PortfoioCard({
 
 export default function Portfolio() {
   return (
-    <section className="px-4 lg:px-40">
-      <h1 className="mt-16 text-2xl font-bold md:mt-24 md:text-3xl text-foreground-high-contrast">
+    <section className="mt-12 md:mt-[105px]">
+      <h1 className="text-2xl font-bold md:text-3xl text-foreground-high-contrast">
         Our <span className="text-gradient">Portfolio</span>
       </h1>
-      <p className="text-sm md:text-lg md:max-w-[709px] text-foreground-low-contrast my-6">
+      <p className="text-sm md:text-lg md:max-w-[709px] text-foreground-low-contrast lg:my-10 my-4">
         As your digital partner, we collaborate with you to drive innovation,
         stay ahead of the curve, and deliver real impact for your business.
       </p>
-      <div className="flex w-full gap-4 pb-1.5 overflow-y-scroll">
+      <div className="flex w-full gap-x-4 pb-1.5 overflow-y-scroll">
         {category.map((c) => (
           <Button
             key={c}
@@ -67,7 +67,7 @@ export default function Portfolio() {
           </Button>
         ))}
       </div>
-      <div className="grid grid-cols-1 gap-8 mt-16 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-12 mt-12 md:mt-[72px] md:grid-cols-2">
         {Array.from({ length: 8 }).map((_, i) => (
           <PortfoioCard
             key={i}
@@ -78,12 +78,14 @@ export default function Portfolio() {
           />
         ))}
       </div>
-      <Button
-        variant={"secondary"}
-        className="mt-12"
-      >
-        Load more
-      </Button>
+      <div className="flex justify-center mt-10 md:justify-normal md:mt-12">
+        <Button
+          variant={"secondary"}
+          className="mx-auto md:mx-0"
+        >
+          Load more
+        </Button>
+      </div>
     </section>
   );
 }

@@ -23,8 +23,8 @@ function ClientCard({
 
 export default function Client() {
   return (
-    <section className="px-4 lg:px-40">
-      <h2 className="mt-16 text-2xl font-bold md:mt-24 md:text-3xl text-foreground-high-contrast">
+    <section className="mt-10 md:mt-40">
+      <h2 className="text-2xl font-bold md:text-3xl text-foreground-high-contrast">
         Our <span className="text-gradient">Client</span>
       </h2>
       <p className="text-sm md:text-lg md:max-w-[709px] text-foreground-low-contrast my-6">

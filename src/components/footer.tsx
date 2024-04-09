@@ -1,10 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "./ui/button";
+
+function CallToAction() {
+  return (
+    <div className="flex flex-col items-center justify-center gap-8 my-[142px]  md:mt-[228px] md:mb-[120px]">
+      <div className="text-2xl font-bold text-center md:text-3xl">
+        <p className="text-foreground-high-contrast">
+          We can help to improve your business
+        </p>
+        <p className="text-gradient">by upgrading your technology!</p>
+      </div>
+      <p className="text-sm md:text-lg text-foreground-low-contrast">
+        Schedule a free 30 mins call with us
+      </p>
+      <Button className="mx-auto w-fit">Book an appointment</Button>
+    </div>
+  );
+}
 
 export default function Footer() {
   return (
-    <footer className="py-12 text-foreground-low-contrast">
-      <div className="flex flex-col gap-6 px-4 lg:px-20">
+    <footer className="px-4 lg:px-20">
+      <CallToAction />
+      <div className="flex flex-col gap-6 py-12 text-foreground-low-contrast">
         <div className="flex flex-col justify-between gap-12 py-8 lg:flex-row lg:gap-20">
           <div className="flex flex-col flex-1 gap-9">
             <Image
