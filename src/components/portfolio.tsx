@@ -49,7 +49,7 @@ function PortfoioCard({
 export default function Portfolio() {
   return (
     <section className="px-4 lg:px-40">
-      <h1 className="mt-16 text-2xl font-bold md:mt-24 md:text-3xl">
+      <h1 className="mt-16 text-2xl font-bold md:mt-24 md:text-3xl text-foreground-high-contrast">
         Our <span className="text-gradient">Portfolio</span>
       </h1>
       <p className="text-sm md:text-lg md:max-w-[709px] text-foreground-low-contrast my-6">
