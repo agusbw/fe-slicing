@@ -19,7 +19,7 @@ function PortfoioCard({
   return (
     <Link
       href={"/detail"}
-      className="flex flex-col gap-6 p-2 border rounded-xl border-border/20 bg-gradient-to-r from-[#3974DC00]/0  via-[#096EB11A]/10 to-[#1FA4D91A]/10"
+      className="flex flex-col gap-6 p-2 border rounded-xl border-border/20 bg-card-gradient"
     >
       <Image
         src={imagePath}
@@ -33,7 +33,7 @@ function PortfoioCard({
         width={440}
         height={216}
       />
-      <div className="flex flex-col gap-x-4 p-4 border-[1px] border-primary-foreground/20 rounded-lg bg-gradient-to-tr from-black to-white/5">
+      <div className="flex flex-col gap-4 p-4 border-[1px] border-primary-foreground/20 rounded-lg bg-card-white-gradient">
         <div className="flex gap-4">
           {categories.map((c) => {
             return <Badge key={c}>{c}</Badge>;

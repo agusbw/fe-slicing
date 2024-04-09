@@ -10,7 +10,7 @@ function ClientCard({
   imageHeight: number;
 }) {
   return (
-    <div className="flex items-center p-4 border-[1px] border-white/20 rounded-lg bg-gradient-to-r from-black/0 to-white/5 justify-normal min-w-[70px]">
+    <div className="flex items-center p-4 border-[1px] border-white/20 rounded-lg bg-card-white-gradient justify-normal min-w-[70px]">
       <Image
         src={`/images/clients/${imageName}`}
         alt="client"
