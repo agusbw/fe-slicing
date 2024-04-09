@@ -2,32 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 0, 0%, 7%, 1;
+    --foreground: 0, 0%, 100%, 1;
+    --low-contrast-foreground: 0, 0%, 77%, 1;
+    --high-contrast-foreground: 274, 28%, 89%, 1;
+
+    --primary: 219, 99%, 55%, 1;
+    --primary-foreground: 240, 100%, 98%, 1;
+
+    --secondary: 0, 0%, 93%;
+    --secondary-foreground: 0, 0%, 100%;
+
+    --border: 0, 0%, 100%, 0.2;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --gradient: linear-gradient(
+      to right,
+      #1fa4d9 0%,
+      #096eb1 37%,
+      #026bec 71.75%,
+      #3974dc 99.83%
+    );
+    --gradient-inverse: linear-gradient(
+      to left,
+      #1fa4d9 0%,
+      #096eb1 37%,
+      #026bec 71.75%,
+      #3974dc 99.83%
+    );
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient bg-clip-text text-transparent;
+  }
+
+  .text-gradient-inverse {
+    @apply bg-gradient-inverse bg-clip-text text-transparent;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-gradient-to-b from-[#051533] to-background text-foreground;
   }
 }
