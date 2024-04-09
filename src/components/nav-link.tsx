@@ -22,7 +22,7 @@ export default function NavLink() {
   return (
     <>
       {/* Desktop Navlink */}
-      <nav className="hidden md:flex gap-[2.5px] bg-[#D1E1FF]/10 rounded-full justify-center items-center p-1 px-4">
+      <nav className="hidden md:flex gap-[2.5px] bg-[#D1E1FF]/10 rounded-full justify-center items-center p-1 px-4 backdrop-blur-xl">
         {navLink.map((link) => {
           return (
             <Link
