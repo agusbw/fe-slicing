@@ -53,6 +53,20 @@
       #026bec 71.75%,
       #3974dc 99.83%
     );
+
+    --card-gradient: linear-gradient(
+      to bottom right,
+      hsla(218, 70%, 54%, 0),
+      hsla(213, 98%, 47%, 0.1),
+      hsla(204, 90%, 36%, 0.1),
+      hsla(197, 75%, 49%, 0.1)
+    );
+
+    --card-white-gradient: linear-gradient(
+      to right,
+      hsla(0, 0%, 0%, 0),
+      hsla(0, 0%, 100%, 0.05)
+    );
   }
 }
 

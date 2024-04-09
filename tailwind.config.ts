@@ -58,6 +58,8 @@ const config = {
       backgroundImage: {
         gradient: "var(--gradient)",
         "gradient-inverse": "var(--gradient-inverse)",
+        "card-gradient": "var(--card-gradient)",
+        "card-white-gradient": "var(--card-white-gradient)",
       },
       borderWidth: {
         DEFAULT: "0.5px",
