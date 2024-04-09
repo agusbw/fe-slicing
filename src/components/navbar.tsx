@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "px-4 lg:px-20 py-6 flex justify-between w-full sticky top-0",
+        "px-4 lg:px-20 py-6 flex justify-between w-full sticky top-0 z-50",
         "after:content-[''] after:block after:h-[1px] after:w-full after:bg-gradient-to-r from-foreground/0 via-foreground/10 to-foreground/0 after:absolute after:bottom-0 after:left-0 after:z-10"
       )}
     >
