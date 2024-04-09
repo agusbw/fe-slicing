@@ -1,7 +1,11 @@
+"use client";
+
 import { Button } from "./ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
+import * as React from "react";
+import { cn } from "@/lib/utils";
 
 const category = ["All", "Web Development", "App Development", "UI Design"];
 
@@ -16,33 +20,52 @@ function PortfoioCard({
   title: string;
   content: string;
 }) {
+  const [isVisible, setIsVisible] = React.useState(false);
+  const domRef = React.useRef<HTMLAnchorElement | null>(null);
+  React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => setIsVisible(entry.isIntersecting));
+    });
+    const currentRef = domRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+      return () => observer.unobserve(currentRef);
+    }
+  }, []);
   return (
-    <Link
-      href={"/detail"}
-      className="flex flex-col gap-6 p-2 border rounded-xl border-border/20 bg-card-gradient"
-    >
-      <Image
-        src={imagePath}
-        className="border rounded-lg border-primary-foreground/20"
-        alt={title}
-        sizes="100vw"
-        style={{
-          width: "100%",
-          height: "auto",
-        }}
-        width={440}
-        height={216}
-      />
-      <div className="flex flex-col gap-4 p-4 border-[1px] border-primary-foreground/20 rounded-lg bg-card-white-gradient">
-        <div className="flex gap-4">
-          {categories.map((c) => {
-            return <Badge key={c}>{c}</Badge>;
-          })}
+    <div>
+      <Link
+        href={"/detail"}
+        className={cn(
+          "flex flex-col gap-6 p-2 border rounded-xl border-border/20 bg-card-gradient",
+          "opacity-0 translate-[30vh] invisible transition-all ease-out duration-1000 will-change-[opacity,transform]",
+          isVisible && "opacity-100 transform-none visible"
+        )}
+        ref={domRef}
+      >
+        <Image
+          src={imagePath}
+          className="border rounded-lg border-primary-foreground/20"
+          alt={title}
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
+          width={440}
+          height={216}
+        />
+        <div className="flex flex-col gap-4 p-4 border-[1px] border-primary-foreground/20 rounded-lg bg-card-white-gradient">
+          <div className="flex gap-4">
+            {categories.map((c) => {
+              return <Badge key={c}>{c}</Badge>;
+            })}
+          </div>
+          <p className="text-base font-semibold lg:text-lg">{title}</p>
+          <p className="text-sm lg:text-base">{content}</p>
         </div>
-        <p className="text-base font-semibold lg:text-lg">{title}</p>
-        <p className="text-sm lg:text-base">{content}</p>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
 
