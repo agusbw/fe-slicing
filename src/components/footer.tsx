@@ -23,7 +23,7 @@ export default function Footer() {
   return (
     <footer className="px-4 lg:px-20">
       <CallToAction />
-      <div className="flex flex-col gap-6 py-12 text-foreground-low-contrast">
+      <div className="flex flex-col gap-6 text-foreground-low-contrast">
         <div className="flex flex-col justify-between gap-12 py-8 lg:flex-row lg:gap-20">
           <div className="flex flex-col flex-1 gap-9">
             <Image
@@ -112,7 +112,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex justify-between w-full text-xs">
+        <div className="flex justify-between w-full mb-12 text-xs">
           <p>Copyright © 2023 Hyge, Pte. Ltd.</p>
           <p>All Rights Reserved</p>
         </div>
