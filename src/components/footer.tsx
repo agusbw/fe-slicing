@@ -4,13 +4,13 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="py-12 text-foreground-low-contrast">
-      <div className="flex flex-col gap-6 px-4 md:px-20">
+      <div className="flex flex-col gap-6 px-4 lg:px-20">
         <div className="flex flex-col justify-between gap-12 py-8 lg:flex-row lg:gap-20">
           <div className="flex flex-col flex-1 gap-9">
             <Image
               src={"/images/logo.svg"}
               alt="Hyge logo"
-              className="hidden md:block"
+              className="hidden lg:block"
               width={100}
               height={28}
             />
